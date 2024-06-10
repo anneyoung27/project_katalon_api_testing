@@ -83,4 +83,90 @@ Then by entering the `HTTP BODY` with the `TEXT` and `JSON` attributes, which wi
 }
 ```
 #### DELETE User
-
+To delete user data based on its id such as changing data on id 5
+```
+https://reqres.in/api/users/5
+```
+Will generate response code `204 NO CONTECT` and no result, because it has been deleted.
+#### GET Resources 
+```
+https://reqres.in/api/unknown
+```
+To get resource data based on ID, which in Reqress is provided with `6 IDs`
+Will produce a response code `200 OK` and the result resources in question
+```
+https://reqres.in/api/unknown?id=1
+https://reqres.in/api/unknown?id=2
+https://reqres.in/api/unknown?id=3
+https://reqres.in/api/unknown?id=4
+https://reqres.in/api/unknown?id=5
+https://reqres.in/api/unknown?id=6
+```
+If the request id does not exist, it will generate a `404 NOT FOUND` response code and no result.
+```
+https://reqres.in/api/unknown?id=23
+```
+#### POST Register
+```
+https://reqres.in/api/register
+```
+To be able to register, you must enter the user data provided by Reqres.
+Then input the data in `HTTP BODY` with `TEXT` and `JSON` attributes
+```
+{
+    "email": "eve.holt@reqres.in",
+    "password": "pistol"
+}
+```
+Will generate response code `200 OK` and **TOKEN**
+Result Register Success
+```
+{
+  "id":4,
+  "token":"QpwL5tke4Pnpja7X4"
+}
+```
+If entering data that is not provided
+```
+{
+  "error":"Note: Only defined users succeed registration"
+}
+```
+or if you just entered an email without password it will be
+```
+{
+  "error":"Missing password"
+}
+```
+#### POST Login
+```
+https://reqres.in/api/login
+```
+To be able to log in, you must enter the user data provided by Reqres.
+Then input the data in `HTTP BODY` with `TEXT` and `JSON` attributes
+```
+{
+    "email": "eve.holt@reqres.in",
+    "password": "cityslicka"
+}
+```
+Will generate response code `200 OK` and **TOKEN**
+Result Login Success
+```
+{
+  "token":"QpwL5tke4Pnpja7X4"
+}
+```
+If you enter data that is not provided, it will generate response code `400 BAD REQUEST`
+Result Login Failed
+```
+{
+  "error":"user not found"
+}
+```
+or if you just entered an email without password it will be
+```
+{
+  "error":"Missing password"
+}
+```
