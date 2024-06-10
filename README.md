@@ -17,3 +17,17 @@ In the implementation of testing, testing was carried out on 30 Test Cases with 
 0 Not Executed
 ```
 So the test result is 100% Passed
+
+### Report
+In testing, if you have to test one test case at a time, it will take a long time, so a **Test Suite** is made so that you can run several test cases simultaneously, namely:
+```
+TS - GET RESOURCES
+TS - GET USER BY ID 
+TS - GET USER PER PAGE
+TS - POST, PUT, AND DELETE USER
+TS - REGISTER AND LOGIN
+```
+To make testing easier, a **Test Suites Collection** was created to run several Test Suites simultaneously, namely:
+```
+TS - TEST ALL
+```
