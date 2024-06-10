@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC-23-Resource Not Found</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fcc77873-0124-4830-9c26-b96efc9cbdbd</testCaseGuid>
+</TestCaseEntity>

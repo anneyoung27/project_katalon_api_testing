@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC-10-User by id 10</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2bc362e8-d52e-4f5c-8c07-8cdc3e6049c3</testCaseGuid>
+</TestCaseEntity>
